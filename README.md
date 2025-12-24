@@ -1,16 +1,27 @@
-# Writing Style Detector  
+# AI-Enhanced Authorship & Integrity Intelligence System  
 ### Hybrid Stylometry + Embedding-Based AI vs Human Text Classifier
+## Problem Statement
+As generative AI tools become increasingly integrated into content creation workflows, enterprises face growing challenges in authorship attribution, academic integrity, and content governance. Traditional rule-based or single-model approaches struggle to balance accuracy, interpretability, and scalability.
 
-This project is a modern, lightweight writing-style analysis system that combines:
+This project explores how hybrid AI systems—combining interpretable stylometric features with semantic embedding-based machine learning models—can provide robust, explainable, and scalable authorship intelligence for real-world enterprise use cases.
 
-- **Stylometric features** (sentence length, vocabulary richness, punctuation habits)  
-- **HuggingFace sentence embeddings**  
-- **Machine learning classification**
+## Product Vision
+This system is designed as a modular AI intelligence layer that can be embedded into enterprise platforms to:
+Detect AI-generated vs human-written content
+Identify distinctive writing-style signatures
+Support integrity, compliance, and trust-focused workflows
+Enable data-driven product decisions around AI governance
 
-to distinguish between:
+## Enterprise & Product Use Cases
 
-- **Human-written text**  
-- **AI-generated text**
+#### Academic Integrity Platforms
+Flag anomalous writing patterns to assist educators and institutions in integrity review workflows.
+#### Enterprise Content Governance
+Monitor internal documentation and externally published content for authorship consistency and compliance.
+#### Publishing & Media Analytics
+Detect deviations from established brand voice or editorial standards.
+#### AI Trust & Safety Tooling
+Support governance frameworks that assess the responsible use of generative AI across organizations.
 
 The goal is to prototype tools for **academic integrity**, **writer verification**, and **essay style consistency**, similar to what EdTech platforms use to detect suspicious writing patterns.
 
@@ -88,3 +99,29 @@ python -m src.predict_ai_classifier_emb
 ```bash
 python -m src.predict
 ```
+
+## Example Output
+{
+  "authorship": "Human",
+  "confidence_score": 0.924,
+  "style_signatures": {
+    "avg_sentence_length": 14.2,
+    "lexical_diversity": 0.76,
+    "punctuation_density": 0.11
+  }
+}
+
+## Interpretation:
+The model predicts the text is human-written with high confidence, supported by consistent stylometric and semantic signals. These outputs are designed to support human-in-the-loop decision systems, not black-box automation.
+
+## Limitations & Product Roadmap
+#### Current Limitations
+Focuses on static stylometric features
+English-language datasets only
+Offline inference (non-real-time)
+
+#### Future Directions
+Integrate LLM-based style reasoning for deeper generative attribution
+Deploy as containerized microservices for enterprise scalability
+Extend to multilingual embeddings and cross-domain writing analysis
+Build dashboard-level visualizations for non-technical stakeholders
